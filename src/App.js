@@ -14,7 +14,11 @@ function App() {
   
   const submitHandler = (e) => {
     e.preventDefault();
-    setParagraphs(data.slice(0, `${inputValue}`));
+    if(inputValue < 1){
+      alert("Paragraphs can not be less then 1.")
+    } else {
+      setParagraphs(data.slice(0, `${inputValue}`));
+    }
   }
 
   return (
